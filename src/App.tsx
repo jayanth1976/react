@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// import ImagesGrid from "./Components/Molecules/ImagesGrid";
+import Filter from "./Components/Organisms/Filter";
+// import SignIn from "./Components/Pages/SignIn";
+import Counter from "./Counter";
+import CandidateTable from "./Components/Pages/CandidateTable";
+import './index.css'
+// import Filter from "./Components/Organisms/Filter";
+const App = () => {
+    return (
+        <div className="App">
+            {/* <ImagesGrid/> */}
+            <Filter />
+            {/* <SignIn/> */}
+            {/* <Counter/> */}
+            {/* <CandidateTable/> */}
+        </div>
+    );
+};
 
 export default App;
