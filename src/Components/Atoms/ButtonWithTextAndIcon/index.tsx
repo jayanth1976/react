@@ -3,7 +3,7 @@ import {Button} from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 
-export interface Props extends HTMLAttributes<HTMLButtonElement>{
+export interface ButtonWithTextAndIconProps extends HTMLAttributes<HTMLButtonElement>{
     text:string
     variant?:'text'| 'contained' | 'outlined',
     startIcon?:boolean,
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   }
 })
 
-export const ButtonWithTextAndIcon = ({variant,Icon,text,startIcon}:Props) => {
+export const ButtonWithTextAndIcon = ({variant,Icon,text,startIcon}:ButtonWithTextAndIconProps) => {
   const classes = useStyles()
  if(startIcon){
   return (

@@ -1,13 +1,13 @@
 import React from 'react'
 
-export interface Props{
+export interface TableCellProps{
     text:string,
     css?:{},
     bool?:true
 }
 
 
-export const TableCell = ({text,css}:Props) => {
+export const TableCell = ({text,css}:TableCellProps) => {
   return (
     <td style={css}>{text}</td>
   )

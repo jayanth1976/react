@@ -6,7 +6,7 @@ import TableContent from "../TableContent";
 import dummyData from "../../../MOCK_DATA.json";
 import Filter from "../Filter";
 
-interface Props {
+interface TableProps {
     showFilter?: boolean;
 }
 
@@ -85,7 +85,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Table = ({ showFilter }: Props) => {
+const Table = ({ showFilter }: TableProps) => {
     const headings = ["NAME", "ADJUDICATION", "STATUS", "LOCATION", "DATE"];
     const classes = useStyles();
     let newArray = dummyData;

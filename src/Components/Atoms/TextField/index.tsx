@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface Props {
+export interface TextFieldProps {
     className?:string;
     type: string;
     placeholder: string;
@@ -8,6 +8,6 @@ export interface Props {
     max?: string;
     css?:{}
 }
-export const TextField = (props: Props) => {
+export const TextField = (props: TextFieldProps) => {
     return <input className="inp" style={props.css} {...props} />;
 };

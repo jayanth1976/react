@@ -1,14 +1,14 @@
 import React from "react";
 // import data from "../../MOCK_DATA.json";
 // import data from "../../Sample.json";
-interface Props{
+interface TableContentProps{
     rowClass?:string;
     considerClass?:string;
     clearClass?:string;
     data:any;
 }
 
-const TableContent = ({rowClass,considerClass,clearClass,data}:Props) => {
+const TableContent = ({rowClass,considerClass,clearClass,data}:TableContentProps) => {
     return (
         <>
             {data.map((item:any) => {

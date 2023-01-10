@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox } from "../../Atoms/Checkbox";
 
-interface Props {
+interface StatusProps {
     handleUpdate: any;
 }
 
@@ -16,7 +16,7 @@ const checkboxStyles = {
     marginBottom: "12px",
 };
 
-const Status = ({ handleUpdate }: Props) => {
+const Status = ({ handleUpdate }: StatusProps) => {
     const statusItems = ["All status", "Clear", "Consider"];
     return (
         <div>

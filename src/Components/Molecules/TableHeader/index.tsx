@@ -8,7 +8,7 @@ import FilterSvg from "../../../Images/FilterSvg";
 import TextWithIcon from "../../Atoms/TextWithIcon";
 import MenuSvg from "../../../Images/MenuSvg";
 
-interface Props {
+interface TableHeaderProps {
     handleClick: () => any;
 }
 
@@ -82,7 +82,7 @@ const useStyles = makeStyles({
     },
 });
 
-const TableHeader = ({ handleClick }: Props) => {
+const TableHeader = ({ handleClick }: TableHeaderProps) => {
     const classes = useStyles();
     return (
         <div className={`${classes.mainCon} ${classes.center}`}>

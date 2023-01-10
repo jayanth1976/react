@@ -4,7 +4,7 @@ import Adjudication from "../../Molecules/Adjudication";
 import Status from "../../Molecules/Status";
 import { makeStyles } from "@mui/styles";
 
-interface Props {
+interface FilterProps {
     classFilter?: string;
     updateStatusArr?: any;
 }
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Filter = ({ classFilter, updateStatusArr }: Props) => {
+const Filter = ({ classFilter, updateStatusArr }: FilterProps) => {
     const classes = useStyles();
     return (
         <div className={`${classes.filterStyles} ${classFilter}`}>
