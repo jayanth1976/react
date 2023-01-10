@@ -1,18 +1,19 @@
-// import ImagesGrid from "./Components/Molecules/ImagesGrid";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import ImagesGrid from "./Components/Molecules/ImagesGrid";
 import Filter from "./Components/Organisms/Filter";
-// import SignIn from "./Components/Pages/SignIn";
+import SignIn from "./Components/Pages/SignIn";
 import Counter from "./Counter";
 import CandidateTable from "./Components/Pages/CandidateTable";
-import './index.css'
+import "./index.css";
 // import Filter from "./Components/Organisms/Filter";
 const App = () => {
     return (
         <div className="App">
             {/* <ImagesGrid/> */}
-            <Filter />
+            {/* <Filter /> */}
             {/* <SignIn/> */}
             {/* <Counter/> */}
-            {/* <CandidateTable/> */}
+            <CandidateTable />
         </div>
     );
 };

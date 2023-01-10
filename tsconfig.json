@@ -17,5 +17,5 @@
         "jsx": "react-jsx"
     },
     "include": ["src"],
-    // "noUnusedLocals": true
+    // "noUnusedLocals": false 
 }

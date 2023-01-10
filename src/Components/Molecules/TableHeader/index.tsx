@@ -1,15 +1,15 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import theme from "../../Theme/Theme";
-import SearchSvg from "../../Images/SearchSvg";
-import { TextField } from "../Atoms/TextField/TextField";
-import FilterSvg from "../../Images/FilterSvg";
-import TextWithIcon from "../Atoms/TextWithIcon/TextWithIcon";
-import MenuSvg from "../../Images/MenuSvg";
+import theme from "../../../Theme/Theme";
+import SearchSvg from "../../../Images/SearchSvg";
+import { TextField } from "../../Atoms/TextField";
+import FilterSvg from "../../../Images/FilterSvg";
+import TextWithIcon from "../../Atoms/TextWithIcon";
+import MenuSvg from "../../../Images/MenuSvg";
 
-interface Props{
-    handleClick:()=>any
+interface Props {
+    handleClick: () => any;
 }
 
 const useStyles = makeStyles({
@@ -33,8 +33,8 @@ const useStyles = makeStyles({
         alignItems: "center",
         margin: "0 !important",
     },
-    right:{
-        justifyContent:'space-around'
+    right: {
+        justifyContent: "space-around",
     },
     input: {
         height: "100%",
@@ -64,26 +64,25 @@ const useStyles = makeStyles({
         justifyContent: "center",
         alignItems: "center",
         border: `1px solid ${theme.palette.grey[50]}`,
-        borderRadius:'2px',
-        cursor:'pointer'
+        borderRadius: "2px",
+        cursor: "pointer",
     },
     classIcon: {
         display: "inline-block",
         background: "aqua",
-        
     },
-    classText : {
-        marginTop:'0 !important',
-        paddingLeft:'6.5px'
+    classText: {
+        marginTop: "0 !important",
+        paddingLeft: "6.5px",
     },
-    classMenu:{
+    classMenu: {
         border: `1px solid ${theme.palette.grey[50]}`,
-        height:"100%",
-        width:'36px'
-    }
+        height: "100%",
+        width: "36px",
+    },
 });
 
-const TableHeader = ({handleClick}:Props) => {
+const TableHeader = ({ handleClick }: Props) => {
     const classes = useStyles();
     return (
         <div className={`${classes.mainCon} ${classes.center}`}>
@@ -106,10 +105,14 @@ const TableHeader = ({handleClick}:Props) => {
                         classIcon={classes.classIcon}
                         classMainCon={classes.classMainCon}
                         classText={classes.classText}
-                        variant='subtitle2'
+                        variant="subtitle2"
                         onClick={handleClick}
                     />
-                    <MenuSvg css={`${classes.classMenu} ${classes.center}`}/>
+                    <MenuSvg
+                        css={`
+                            ${classes.classMenu} ${classes.center}
+                        `}
+                    />
                 </div>
             </div>
         </div>

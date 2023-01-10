@@ -1,20 +1,20 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { TextField } from "./../Atoms/TextField/TextField";
+import { TextField } from "../../Atoms/TextField";
 import { VisibilityOffOutlined } from "@mui/icons-material";
-import { Checkbox } from "../Atoms/Checkbox/Checkbox";
-import "../../index.css";
-import Google from "./GoogleSvg";
-import Github from "./GithubSvg";
-import { Button } from "../Atoms/Button/Button";
-import theme from '../../Theme/Theme'
+import { Checkbox } from "../../Atoms/Checkbox";
+import "../../../index.css";
+import Google from "../../../Images/GoogleSvg";
+import Github from "../../../Images/GithubSvg";
+import { Button } from "../../Atoms/Button";
+import theme from "../../../Theme/Theme";
 import { Typography } from "@mui/material";
 const useStyles = makeStyles({
     mainCon: {
         width: "35.13%",
         height: "87.5%",
-        minHeight:'672px',
-        minWidth:'380px',
+        minHeight: "672px",
+        minWidth: "380px",
         borderRadius: "6px",
         boxShadow: "0px 4px 28px rgba(45, 45, 47, 0.1)",
     },
@@ -172,7 +172,10 @@ const SignIn = () => {
                     <Github />
                     <p>Sign with Github</p>
                 </div>
-                <Typography variant="subtitle2" className={`${classes.subTitle} ${classes.signUp}`}>
+                <Typography
+                    variant="subtitle2"
+                    className={`${classes.subTitle} ${classes.signUp}`}
+                >
                     Don't have an account? <span>Sign up</span>
                 </Typography>
             </div>

@@ -1,10 +1,10 @@
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
-import theme from "../../Theme/Theme";
-import TableHead from "../Molecules/TableHead";
-import TableContent from "./TableContent";
-import dummyData from "../../MOCK_DATA.json";
-import Filter from "./Filter";
+import theme from "../../../Theme/Theme";
+import TableHead from "../../Molecules/TableHead";
+import TableContent from "../TableContent";
+import dummyData from "../../../MOCK_DATA.json";
+import Filter from "../Filter";
 
 interface Props {
     showFilter?: boolean;
@@ -89,7 +89,6 @@ const Table = ({ showFilter }: Props) => {
     const headings = ["NAME", "ADJUDICATION", "STATUS", "LOCATION", "DATE"];
     const classes = useStyles();
     let newArray = dummyData;
-    
 
     const initialState = {
         1: false,
@@ -97,21 +96,21 @@ const Table = ({ showFilter }: Props) => {
         3: false,
     };
     const [statusObj, setStatusObj] = useState(initialState);
-    const handleSetStatusObj = (e:any) => {
-        const name = e.target.id
-        setStatusObj((prev)=>{
-            return {...prev,[name]:e.target.checked}
+    const handleSetStatusObj = (e: any) => {
+        const name = e.target.id;
+        setStatusObj((prev) => {
+            return { ...prev, [name]: e.target.checked };
         });
-        console.log(e.target.checked)
+        console.log(e.target.checked);
     };
-    
+
     let filteredArray = newArray.filter((item) => {
-        if(!statusObj[1] && statusObj[2]) return item.status === "CLEAR";
-        else if(!statusObj[1] && statusObj[3]) return item.status === "CONSIDER";
-        else if(statusObj[2] && statusObj[3]) return true;
+        if (statusObj[2] && statusObj[3]) return true;
+        else if (statusObj[3]) return item.status === "CONSIDER";
+        else if (statusObj[2]) return item.status === "CLEAR"
         else return true;
     });
-    console.log(statusObj)
+    console.log(statusObj);
     return (
         <table className={classes.table}>
             <TableHead colHeadings={headings} css={classes.tHead} />
@@ -122,7 +121,7 @@ const Table = ({ showFilter }: Props) => {
                 considerClass={classes.consider}
                 clearClass={classes.clear}
             />
-            
+
             <Filter
                 classFilter={
                     showFilter
