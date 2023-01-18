@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import React, { useState, useEffect } from "react";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-
+ 
 const useStyles = makeStyles({
     count: {
         display: "flex",
@@ -75,6 +75,7 @@ const Counter = () => {
     const updateLocalStorage = (cnt:number) =>
         localStorage.setItem("count", cnt.toString());
     // console.log('hello')
+    const url = 'image/pic.png';
     return (
         <div className={classes.con}>
             <div className={classes.count}>
@@ -94,6 +95,7 @@ const Counter = () => {
                 <button id="sub" className={classes.btn} onClick={handleClick}>
                     -
                 </button>
+                <img src={url} alt='logo'/>
             </div>
         </div>
     );

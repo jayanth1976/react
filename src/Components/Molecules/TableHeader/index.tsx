@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import theme from "../../../Theme/Theme";
+import theme from "../../../Theme";
 import SearchSvg from "../../../Images/SearchSvg";
 import { TextField } from "../../Atoms/TextField";
 import FilterSvg from "../../../Images/FilterSvg";

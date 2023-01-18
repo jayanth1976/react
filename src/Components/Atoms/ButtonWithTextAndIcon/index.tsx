@@ -1,6 +1,5 @@
 import React,{HTMLAttributes} from 'react'
 import {Button} from '@mui/material'
-import { makeStyles } from '@mui/styles'
 
 
 export interface ButtonWithTextAndIconProps extends HTMLAttributes<HTMLButtonElement>{
@@ -10,17 +9,13 @@ export interface ButtonWithTextAndIconProps extends HTMLAttributes<HTMLButtonEle
     Icon:any
 }
 
-const useStyles = makeStyles({
-  btn:{
-    backgroundColor:'green'
-  }
-})
+
 
 export const ButtonWithTextAndIcon = ({variant,Icon,text,startIcon}:ButtonWithTextAndIconProps) => {
-  const classes = useStyles()
+
  if(startIcon){
   return (
-    <Button variant={variant} startIcon={<Icon/>} className={classes.btn} sx={{textTransform:'none'}}> 
+    <Button variant={variant} startIcon={<Icon/>} sx={{textTransform:'none'}}> 
     {text}
   </Button>
     )

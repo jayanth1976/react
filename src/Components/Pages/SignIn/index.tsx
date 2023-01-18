@@ -7,8 +7,50 @@ import "../../../index.css";
 import Google from "../../../Images/GoogleSvg";
 import Github from "../../../Images/GithubSvg";
 import { Button } from "../../Atoms/Button";
-import theme from "../../../Theme/Theme";
+import theme from "../../../Theme";
 import { Typography } from "@mui/material";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+    width: 35.13%;
+    height: 87.5%;
+    min-height: 672px;
+    min-width: 380px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 28px rgba(45, 45, 47, 0.1);
+
+    & .subCon {
+        margin: 2rem 2.375rem;
+        padding: 0.5rem;
+    }
+    & .subTitle {
+        margin-top: 8px !important;
+    }
+    & .inpGrp {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    & .input {
+        height: 36px;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid ${theme.palette.grey[50]};
+        border-radius: 0.25rem;
+        & :focus{
+            outline: 1px solid hsla(201, 100%, 50%, 0.5);
+        }
+        font-size: 14px;
+    }
+    & .label {
+        color: ${theme.palette.grey[100]};
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+`;
+
 const useStyles = makeStyles({
     mainCon: {
         width: "35.13%",
@@ -24,6 +66,7 @@ const useStyles = makeStyles({
     },
     subTitle: {
         marginTop: "8px",
+        color: "aqua",
     },
     inpGrp: {
         marginTop: "24px",
@@ -129,24 +172,24 @@ const SignIn = () => {
     // const content = ["password", "confirm password"];
     const classes = useStyles();
     return (
-        <div className={classes.mainCon}>
-            <div className={classes.subCon}>
+        <Wrapper>
+            <div className="subCon">
                 <Typography variant="h3">Sign in</Typography>
-                <Typography variant="subtitle2" className={classes.subTitle}>
+                <Typography variant="subtitle2" className="subTitle">
                     Please enter your login credentials
                 </Typography>
-                <div className={classes.inpGrp}>
-                    <label className={classes.label}>Email</label>
+                <div className="inpGrp">
+                    <label className='label'>Email</label>
                     <TextField
-                        className={classes.input}
+                        className="input"
                         type="email"
                         placeholder="Email"
                     />
                 </div>
-                <div className={classes.inpGrp}>
-                    <label className={classes.label}>Password</label>
+                <div className="inpGrp">
+                    <label className='label'>Password</label>
                     <TextField
-                        className={classes.input}
+                        className="input"
                         type="password"
                         placeholder="password"
                     />
@@ -179,7 +222,7 @@ const SignIn = () => {
                     Don't have an account? <span>Sign up</span>
                 </Typography>
             </div>
-        </div>
+        </Wrapper>
     );
 };
 

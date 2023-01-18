@@ -5,6 +5,7 @@ import SignIn from "./Components/Pages/SignIn";
 import Counter from "./Counter";
 import CandidateTable from "./Components/Pages/CandidateTable";
 import "./index.css";
+import { Button } from "./Components/Atoms/Button";
 // import Filter from "./Components/Organisms/Filter";
 const App = () => {
     return (
@@ -12,8 +13,8 @@ const App = () => {
             {/* <ImagesGrid/> */}
             {/* <Filter /> */}
             {/* <SignIn/> */}
-            {/* <Counter/> */}
-            <CandidateTable />
+            <Counter/>
+            {/* <CandidateTable /> */}
         </div>
     );
 };
